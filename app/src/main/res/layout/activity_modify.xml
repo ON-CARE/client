@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="102dp"
         android:layout_toEndOf="@+id/btn_back"
         android:fontFamily="@font/nexon2_bold"
         android:text="회원정보 수정"
@@ -90,7 +90,7 @@
                     android:fontFamily="@font/nexon2"
                     android:text="이메일 변경"
                     android:textColor="@color/white"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/data_email"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -145,7 +145,7 @@
                     android:fontFamily="@font/nexon2"
                     android:text="비밀번호 변경"
                     android:textColor="@color/white"
-                    android:textSize="9sp"
+                    android:textSize="11sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/data_pwd"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -328,15 +328,15 @@
             <android.widget.Button
                 android:id="@+id/btn_update"
                 android:layout_width="160dp"
-                android:layout_height="36dp"
-                android:background="@drawable/btn_modi_small"
-                android:text="변경 사항 저장"
-                android:fontFamily="@font/nexon2_medium"
-                android:textColor="@color/white"
-                android:layout_marginTop="15dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="47dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
-                android:textSize="13sp"/>
+                android:background="@drawable/btn_modi_small"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="변경 사항 저장"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
 
 
         </LinearLayout>

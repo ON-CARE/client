@@ -38,5 +38,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.github.skydoves:balloon:1.6.9")
+    implementation(libs.balloon)
+    implementation(libs.android)
 }

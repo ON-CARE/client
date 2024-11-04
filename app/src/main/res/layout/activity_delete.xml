@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="104dp"
         android:fontFamily="@font/nexon2_bold"
         android:text="아래 내용에\n동의하십니까?"
         android:textColor="@color/instead"
@@ -54,7 +54,7 @@
         android:id="@+id/textView2"
         android:layout_width="307dp"
         android:layout_height="350dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/del_bg"
         android:fontFamily="@font/nexon2_medium"
         android:letterSpacing="0.02"
@@ -63,7 +63,7 @@
         android:textColor="@color/instead"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_message"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_message"
         app:layout_constraintTop_toBottomOf="@+id/txt_message" />
 
