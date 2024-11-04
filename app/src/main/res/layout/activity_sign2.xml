@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignActivity2">
+
+  <ImageView
+      android:id="@+id/btn_back"
+      android:layout_width="38dp"
+      android:layout_height="34dp"
+      android:layout_marginTop="28dp"
+      android:scaleX="0.7"
+      android:scaleY="0.6"
+      android:src="@drawable/icon_back"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.04"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/txt_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="35dp"
+      android:fontFamily="@font/nexon2_bold"
+      android:text="회원가입"
+      android:textColor="@color/instead"
+      android:textSize="19sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.408"
+      app:layout_constraintStart_toEndOf="@+id/btn_back"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/txt_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="72dp"
+      android:fontFamily="@font/nexon2"
+      android:text="이름"
+      android:textColor="@color/instead"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.129"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+  <EditText
+      android:id="@+id/edit_name"
+      android:layout_width="310dp"
+      android:layout_height="47dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/editext_sign"
+      android:fontFamily="@font/nexon2_light"
+      android:hint="이름을 입력하세요."
+      android:inputType="textVisiblePassword"
+      android:paddingLeft="34dp"
+      android:paddingTop="2dp"
+      android:paddingRight="34dp"
+      android:textColorHint="@color/hint"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_name"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/txt_name"
+      app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+  <TextView
+      android:id="@+id/txt_birthday"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:fontFamily="@font/nexon2"
+      android:text="생년월일"
+      android:textColor="@color/instead"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="@+id/edit_name"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/edit_name"
+      app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+  <EditText
+      android:id="@+id/edit_bithday"
+      android:layout_width="155dp"
+      android:layout_height="45dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/editext_sign"
+      android:fontFamily="@font/nexon2_light"
+      android:hint="20241101"
+      android:inputType="numberSigned"
+      android:paddingLeft="34dp"
+      android:paddingTop="2dp"
+      android:paddingRight="34dp"
+      android:textColorHint="@color/hint"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_birthday"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/txt_birthday"
+      app:layout_constraintTop_toBottomOf="@+id/txt_birthday" />
+
+  <TextView
+      android:id="@+id/txt_sex"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:fontFamily="@font/nexon2"
+      android:text="성별"
+      android:textColor="@color/instead"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="@+id/edit_name"
+      app:layout_constraintHorizontal_bias="0.671"
+      app:layout_constraintStart_toStartOf="@+id/edit_name"
+      app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+  <RadioGroup
+      android:id="@+id/radio_sex"
+      android:layout_width="wrap_content"
+      android:layout_height="46dp"
+      android:layout_marginTop="15dp"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="@+id/txt_sex"
+      app:layout_constraintHorizontal_bias="0.027"
+      app:layout_constraintStart_toStartOf="@+id/txt_sex"
+      app:layout_constraintTop_toBottomOf="@+id/txt_sex">
+
+    <RadioButton
+        android:id="@+id/radio_m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_radio_button_left"
+        android:button="@null"
+        android:fontFamily="@font/nexon2_medium"
+        android:paddingLeft="4dp"
+        android:text="남"
+        android:textAlignment="center"
+        android:textColor="@drawable/selector_radio_text" />
+
+    <RadioButton
+        android:id="@+id/radio_f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_radio_button_right"
+        android:button="@null"
+        android:fontFamily="@font/nexon2_medium"
+        android:paddingRight="4dp"
+        android:text="여"
+        android:textAlignment="center"
+        android:textColor="@drawable/selector_radio_text" />
+
+  </RadioGroup>
+
+  <TextView
+      android:id="@+id/txt_phone"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:fontFamily="@font/nexon2"
+      android:text="연락처"
+      android:textColor="@color/instead"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="@+id/edit_bithday"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/edit_bithday"
+      app:layout_constraintTop_toBottomOf="@+id/edit_bithday" />
+
+  <EditText
+      android:id="@+id/edit_phone"
+      android:layout_width="310dp"
+      android:layout_height="47dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/editext_sign"
+      android:fontFamily="@font/nexon2_light"
+      android:hint="01012345678"
+      android:inputType="number"
+      android:paddingLeft="34dp"
+      android:paddingTop="2dp"
+      android:paddingRight="34dp"
+      android:textColorHint="@color/hint"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_phone"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/txt_phone"
+      app:layout_constraintTop_toBottomOf="@+id/txt_phone" />
+
+  <TextView
+      android:id="@+id/txt_emergency_call"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="36dp"
+      android:fontFamily="@font/nexon2"
+      android:text="긴급 연락처"
+      android:textColor="@color/instead"
+      android:textSize="15sp"
+      app:layout_constraintEnd_toEndOf="@+id/edit_phone"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/edit_phone"
+      app:layout_constraintTop_toBottomOf="@+id/edit_phone" />
+
+  <ImageView
+      android:id="@+id/tooltip_emergency_call"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="3dp"
+      android:layout_marginTop="32dp"
+      android:scaleX="0.6"
+      android:scaleY="0.6"
+      android:src="@drawable/icon_tooltip_questionmark"
+      app:layout_constraintEnd_toEndOf="@+id/edit_phone"
+      app:layout_constraintHorizontal_bias="0.25"
+      app:layout_constraintStart_toStartOf="@+id/edit_phone"
+      app:layout_constraintTop_toBottomOf="@+id/edit_phone" />
+
+  <EditText
+      android:id="@+id/edit_emergency_call"
+      android:layout_width="310dp"
+      android:layout_height="47dp"
+      android:layout_marginTop="16dp"
+      android:background="@drawable/editext_sign"
+      android:fontFamily="@font/nexon2_light"
+      android:hint="긴급연락처를 입력하세요."
+      android:inputType="number"
+      android:paddingLeft="34dp"
+      android:paddingTop="2dp"
+      android:paddingRight="34dp"
+      android:textColorHint="@color/hint"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="@+id/txt_emergency_call"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/txt_emergency_call"
+      app:layout_constraintTop_toBottomOf="@+id/txt_emergency_call" />
+
+  <android.widget.Button
+      android:id="@+id/btn_start"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/btn_sign"
+      android:fontFamily="@font/nexon2_bold"
+      android:text="로그인하고 시작하기"
+      android:textColor="@color/white"
+      android:textSize="14sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.486"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.92" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

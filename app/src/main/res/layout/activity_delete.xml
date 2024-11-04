@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:scaleX="0.7"
+        android:scaleY="0.6"
+        android:src="@drawable/icon_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/nexon2_bold"
+        android:text="회원 탈퇴"
+        android:textColor="@color/instead"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/nexon2_bold"
+        android:text="아래 내용에\n동의하십니까?"
+        android:textColor="@color/instead"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_back"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="307dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/del_bg"
+        android:fontFamily="@font/nexon2_medium"
+        android:letterSpacing="0.02"
+        android:padding="35dp"
+        android:text="@string/delete_note"
+        android:textColor="@color/instead"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_message"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/txt_message"
+        app:layout_constraintTop_toBottomOf="@+id/txt_message" />
+
+    <android.widget.Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/btn_sign"
+        android:fontFamily="@font/nexon2_bold"
+        android:text="동의하고 탈퇴 진행하기"
+        android:textColor="@color/white"
+        android:textSize="13.5sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

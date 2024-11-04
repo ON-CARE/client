@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">oncare</string>
+    <string name="title_activity_login2">LoginActivity2</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="delete_note">-  탈퇴 진행 시, 회원님의 \n모든 개인정보는 완전히 삭제됩니다.\n\n\n-  탈퇴 이후, 개인정보 및 \n축적된 생체 데이터는 복구가 불가능합니다.</string>
+    <string name="delete_dialog_title">회원 탈퇴가 완료되었습니다.</string>
+    <string name="delete_dialog_msg">로그인 화면으로 돌아갑니다.</string>
+    <string name="call_dialog_title">긴급 신고 완료</string>
+    <string name="call_dialog_msg">긴급 신고 메시지가 발송되었습니다.</string>
+    <string name="update_dialog_title">변경 사항 저장 완료.</string>
+    <string name="update_dialog_msg">변경 사항이 성공적으로 저장되었습니다.</string>
+    <string name="emergency_dialog_msg1">현재 도움이 필요한 상황이십니까?</string>
+    <string name="emergency_dialog_msg2">응답하지 않을 시, 긴급 연락처로 긴급 신고 메시지가 발송됩니다.</string>
+
+</resources>

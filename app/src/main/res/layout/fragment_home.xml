@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="#F8F8F8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nexon2_bold"
+            android:text="나의\n생체데이터"
+            android:textColor="@color/instead"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/container_heartrate"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+        <Button
+            android:id="@+id/btn_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="For Test"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.819"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="130dp"
+            android:maxWidth="130dp"
+            android:layout_height="35dp"
+            android:singleLine="true"
+            android:fontFamily="@font/nexon2_bold"
+            android:gravity="end"
+            android:textColor="@color/instead"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.33" />
+
+        <TextView
+            android:id="@+id/nim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexon2_bold"
+            android:text=" 님,"
+            android:textColor="@color/instead"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/user_name"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="361dp"
+            android:layout_height="106dp"
+            android:src="@drawable/home_greeting"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.378" />
+
+        <RelativeLayout
+            android:id="@+id/container_heartrate"
+            android:layout_width="320dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/home_data"
+            app:layout_constraintBottom_toTopOf="@+id/container_step"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView">
+
+            <TextView
+                android:id="@+id/title_heartrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2"
+                android:paddingStart="60dp"
+                android:paddingTop="21dp"
+                android:text="심박수"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/data_heartrate"
+                android:layout_width="165dp"
+                android:layout_height="93dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/nexon2_medium"
+                android:gravity="end"
+                android:paddingTop="42dp"
+                android:paddingEnd="36dp"
+                android:text="70"
+                android:textColor="@color/dark_blue"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/unit_heartrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/data_heartrate"
+                android:layout_toEndOf="@+id/title_heartrate"
+                android:fontFamily="@font/nexon2_light"
+                android:paddingStart="134dp"
+                android:text="bpm"
+                android:textColor="@color/unit"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/container_step"
+            android:layout_width="320dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/home_data"
+            app:layout_constraintBottom_toTopOf="@+id/container_ecg"
+            app:layout_constraintEnd_toEndOf="@+id/container_heartrate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/container_heartrate">
+
+            <TextView
+                android:id="@+id/title_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2"
+                android:paddingStart="60dp"
+                android:paddingTop="21dp"
+                android:text="걸음수"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/data_step"
+                android:layout_width="wrap_content"
+                android:layout_height="93dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/nexon2_medium"
+                android:gravity="end"
+                android:maxWidth="230dp"
+                android:paddingTop="46dp"
+                android:paddingEnd="36dp"
+                android:text="11111"
+                android:textColor="@color/dark_blue"
+                android:textSize="43sp" />
+
+            <TextView
+                android:id="@+id/unit_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/data_step"
+                android:layout_toEndOf="@+id/title_step"
+                android:fontFamily="@font/nexon2_light"
+                android:paddingStart="138dp"
+                android:text="걸음"
+                android:textColor="@color/unit"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/container_ecg"
+            android:layout_width="320dp"
+            android:layout_height="125dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/home_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/container_step"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/container_step">
+
+            <TextView
+                android:id="@+id/title_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2"
+                android:paddingStart="66dp"
+                android:paddingTop="21dp"
+                android:text="ECG"
+                android:textColor="@color/dark_blue"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/data_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/nexon2_medium"
+                android:gravity="end"
+                android:maxWidth="230dp"
+                android:paddingTop="64dp"
+                android:paddingEnd="36dp"
+                android:text="동리듬"
+                android:textColor="@color/dark_blue"
+                android:textSize="37sp" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

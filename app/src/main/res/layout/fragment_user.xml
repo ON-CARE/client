@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserFragment"
+    android:background="#F8F8F8">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/user_tab_info"
+            android:layout_width="365dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/user_info"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/user_tab_modi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:fontFamily="@font/nexon2_medium"
+                android:gravity="start"
+                android:paddingTop="38dp"
+                android:textColor="@color/instead"
+                android:textSize="29sp" />
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="225dp"
+                android:layout_height="17dp"
+                android:layout_gravity="end"
+                android:fontFamily="@font/nexon2_light"
+                android:gravity="start"
+                android:paddingTop="4dp"
+                android:textColor="@color/instead"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_tab_modi"
+            android:layout_width="365dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/user_tab"
+            app:layout_constraintBottom_toTopOf="@+id/user_tab_noti"
+            app:layout_constraintEnd_toEndOf="@+id/user_tab_info"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/user_tab_info">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.3"
+                android:paddingStart="12dp"
+                android:src="@drawable/icon_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:fontFamily="@font/nexon2"
+                android:text="개인정보 수정"
+                android:textColor="@color/instead"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_tab_dev"
+            android:layout_width="365dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/user_tab"
+            app:layout_constraintBottom_toTopOf="@+id/user_tab_del"
+            app:layout_constraintEnd_toEndOf="@+id/user_tab_noti"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/user_tab_noti">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.3"
+                android:paddingStart="12dp"
+                android:src="@drawable/icon_device" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.6"
+                android:fontFamily="@font/nexon2"
+                android:text="장치 설정"
+                android:textColor="@color/instead"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_tab_noti"
+            android:layout_width="365dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/user_tab"
+            app:layout_constraintBottom_toTopOf="@+id/user_tab_dev"
+            app:layout_constraintEnd_toEndOf="@+id/user_tab_modi"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/user_tab_modi">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:paddingStart="12dp"
+                android:src="@drawable/icon_bell" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.57"
+                android:fontFamily="@font/nexon2"
+                android:text="알림 설정"
+                android:textColor="@color/instead"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/user_tab_del"
+            android:layout_width="365dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="260dp"
+            android:background="@drawable/user_tab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/user_tab_dev"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/user_tab_dev">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.3"
+                android:paddingStart="12dp"
+                android:src="@drawable/icon_xcross" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.9"
+                android:fontFamily="@font/nexon2"
+                android:text="회원 탈퇴"
+                android:textColor="#E54343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

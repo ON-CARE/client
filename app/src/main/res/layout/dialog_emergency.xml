@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="180dp"
+    android:background="@drawable/bg_dialog">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="120dp"
+        android:drawableStart="@drawable/icon_warn"
+        android:fontFamily="@font/nexon2_bold"
+        android:text=" 위험 신호 감지"
+        android:textColor="@color/instead"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/dialog_msg1"
+        android:layout_width="240dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/nexon2_medium"
+        android:gravity="center"
+        android:text="@string/emergency_dialog_msg1"
+        android:textColor="@color/instead"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_msg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dialog_msg2"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/nexon2_light"
+        android:gravity="center"
+        android:text="@string/emergency_dialog_msg2"
+        android:textColor="#686868"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_yes"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+
+    <android.widget.Button
+        android:id="@+id/btn_yes"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_confirm_dialog_red"
+        android:fontFamily="@font/nexon2"
+        android:text="예"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+
+    <android.widget.Button
+        android:id="@+id/btn_no"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_confirm_dialog_grey"
+        android:fontFamily="@font/nexon2"
+        android:text="아니오"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
