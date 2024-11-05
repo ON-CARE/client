@@ -40,10 +40,6 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.kakao.vectormap.APP_KEY"
-            android:value="305dc87fd221c7ec895d67b2ca481cd2"/>
-
     </application>
 
 </manifest>

@@ -45,16 +45,18 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
 
+
         edit_email=findViewById(R.id.edit_email);
         edit_pwd=findViewById(R.id.edit_pwd);
         btn_login=findViewById(R.id.btn_login);
         btn_sign=findViewById(R.id.btn_sign);
 
-        // 키 해시 : fzOeg7j3fiF8LaBSVEzN5BgmD80=
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { // 로그인 버튼 클릭
+
+                // 사용자가 입력한 값 변수에 저장
                 email_input= String.valueOf(edit_email.getText());
                 pwd_input= String.valueOf(edit_pwd.getText());
 
