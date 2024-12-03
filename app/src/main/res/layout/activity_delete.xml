@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="136dp"
         android:fontFamily="@font/nexon2_bold"
         android:text="아래 내용에\n동의하십니까?"
         android:textColor="@color/instead"
@@ -54,7 +54,7 @@
         android:id="@+id/textView2"
         android:layout_width="307dp"
         android:layout_height="350dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/del_bg"
         android:fontFamily="@font/nexon2_medium"
         android:letterSpacing="0.02"
@@ -77,10 +77,12 @@
         android:text="동의하고 탈퇴 진행하기"
         android:textColor="@color/white"
         android:textSize="13.5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
