@@ -21,7 +21,6 @@ public class DeleteActivity extends AppCompatActivity {
     ImageView btn_back;
     Button btn_delete;
     ConfirmDialog confirmDialog;
-    String test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,4 +64,5 @@ public class DeleteActivity extends AppCompatActivity {
             }
         });
     }
+
 }

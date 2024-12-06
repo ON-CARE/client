@@ -2,83 +2,84 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="280dp"
-    android:layout_height="180dp"
+    android:layout_width="320dp"
+    android:layout_height="230dp"
     android:background="@drawable/bg_dialog">
 
     <TextView
         android:id="@+id/dialog_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
         android:drawableStart="@drawable/icon_warn"
         android:fontFamily="@font/nexon2_bold"
         android:text=" 위험 신호 감지"
         android:textColor="@color/instead"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/dialog_msg1"
-        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/dialog_msg1"
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/nexon2_medium"
         android:gravity="center"
         android:text="@string/emergency_dialog_msg1"
         android:textColor="@color/instead"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/dialog_msg2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_title"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/dialog_title"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
 
     <TextView
         android:id="@+id/dialog_msg2"
-        android:layout_width="210dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/nexon2_light"
         android:gravity="center"
         android:text="@string/emergency_dialog_msg2"
         android:textColor="#686868"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_yes"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
         app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+        app:layout_constraintStart_toStartOf="@+id/dialog_msg1"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_msg1" />
 
     <android.widget.Button
         android:id="@+id/btn_yes"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
         android:background="@drawable/btn_confirm_dialog_red"
         android:fontFamily="@font/nexon2"
         android:text="예"
         android:textColor="@color/white"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/dialog_msg2"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_msg2" />
 
     <android.widget.Button
         android:id="@+id/btn_no"
-        android:layout_width="80dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="110dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="14dp"
         android:background="@drawable/btn_confirm_dialog_grey"
         android:fontFamily="@font/nexon2"
         android:text="아니오"
         android:textColor="@color/white"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/dialog_msg1"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="@+id/dialog_msg1" />
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/dialog_msg2"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_msg2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

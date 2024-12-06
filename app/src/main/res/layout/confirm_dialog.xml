@@ -2,52 +2,52 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="280dp"
-    android:layout_height="140dp"
+    android:layout_width="320dp"
+    android:layout_height="170dp"
     android:background="@drawable/bg_dialog">
 
         <TextView
             android:id="@+id/dialog_title"
-            android:layout_width="240dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:fontFamily="@font/nexon2_medium"
             android:gravity="center"
             android:textColor="@color/instead"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toTopOf="@+id/dialog_msg"
+            android:textSize="25sp"
+            android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.82" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/dialog_msg"
-            android:layout_width="240dp"
-            android:layout_height="22dp"
-            android:layout_marginBottom="12dp"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
             android:fontFamily="@font/nexon2"
+            android:gravity="center"
+            android:textAlignment="center"
             android:textColor="#686868"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_close"
-            app:layout_constraintEnd_toEndOf="@+id/dialog_title"
-            app:layout_constraintHorizontal_bias="0.482"
-            app:layout_constraintStart_toStartOf="@+id/dialog_title" />
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_title" />
 
         <android.widget.Button
             android:id="@+id/btn_close"
-            android:layout_width="70dp"
-            android:layout_height="28dp"
-            android:layout_marginBottom="4dp"
+            android:layout_width="110dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/btn_confirm_dialog"
             android:fontFamily="@font/nexon2"
             android:text="닫기"
             android:textColor="@color/white"
-            android:textSize="10sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/dialog_title"
-            app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="@+id/dialog_title" />
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_msg"
+            app:layout_constraintStart_toStartOf="@+id/dialog_msg"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_msg" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

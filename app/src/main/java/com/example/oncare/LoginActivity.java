@@ -63,11 +63,11 @@ public class LoginActivity extends AppCompatActivity {
                 
                 // 툴팁 객체 생성
                 toast_fail = new Balloon.Builder(getApplicationContext())
-                        .setWidthRatio(0.4f)
-                        .setHeight(60)
+                        .setWidthRatio(0.53f)
+                        .setHeight(70)
                         .setIsVisibleArrow(false)
-                        .setPadding(5)
-                        .setTextSize(10f)
+                        .setPadding(9)
+                        .setTextSize(15f)
                         .setCornerRadius(30f)
                         .setAlpha(0.8f)
                         .setText("빈 칸 없이 입력해주세요.")

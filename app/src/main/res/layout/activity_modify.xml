@@ -1,347 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:background="@color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ModifyActivity">
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/btn_back"
         android:layout_width="38dp"
         android:layout_height="34dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginStart="15dp"
-        android:scaleX="0.7"
-        android:scaleY="0.6"
-        android:src="@drawable/icon_back" />
+        android:layout_marginTop="40dp"
+        android:scaleX="0.8"
+        android:scaleY="0.7"
+        android:src="@drawable/icon_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txt_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginStart="102dp"
-        android:layout_toEndOf="@+id/btn_back"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/nexon2_bold"
-        android:text="회원정보 수정"
+        android:text="개인정보 수정"
         android:textColor="@color/instead"
-        android:textSize="19sp"/>
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:layout_below="@+id/txt_title"
-        android:paddingTop="40dp">
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="70dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"
+        app:layout_constraintVertical_bias="0.0">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp">
 
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/group_modi_email"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-
-                <TextView
-                    android:id="@+id/title_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="28dp"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="이메일 주소"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toStartOf="@+id/data_email"
-                    app:layout_constraintHorizontal_bias="0.495"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/data_email"
-                    android:layout_width="220dp"
-                    android:layout_height="16dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_toEndOf="@+id/title_email"
-                    android:fontFamily="@font/nexon2"
-                    android:gravity="start"
-                    android:text="emailNow@email.com"
-                    android:textColor="@color/instead"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toTopOf="@+id/btn_modi_email"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <android.widget.Button
-                    android:id="@+id/btn_modi_email"
-                    android:layout_width="90dp"
-                    android:layout_height="31dp"
-                    android:layout_below="@+id/data_email"
-                    android:layout_marginBottom="18dp"
-                    android:background="@drawable/btn_modi_small"
-                    android:fontFamily="@font/nexon2"
-                    android:text="이메일 변경"
-                    android:textColor="@color/white"
-                    android:textSize="11sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/data_email"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/data_email" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/group_modi_pwd"
-                android:layout_width="match_parent"
-                android:layout_height="100dp">
-
-                <TextView
-                    android:id="@+id/title_pwd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="28dp"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="비밀번호"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp"
-                    app:layout_constraintEnd_toStartOf="@+id/data_pwd"
-                    app:layout_constraintHorizontal_bias="0.46"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/data_pwd"
-                    android:layout_width="220dp"
-                    android:layout_height="16dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginTop="28dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_toEndOf="@+id/title_pwd"
-                    android:fontFamily="@font/nexon2"
-                    android:gravity="start"
-                    android:text="******************"
-                    android:textColor="@color/instead"
-                    android:textSize="13sp"
-                    app:layout_constraintBottom_toTopOf="@+id/btn_modi_pwd"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <android.widget.Button
-                    android:id="@+id/btn_modi_pwd"
-                    android:layout_width="90dp"
-                    android:layout_height="31dp"
-                    android:layout_below="@+id/data_pwd"
-                    android:layout_marginBottom="24dp"
-                    android:background="@drawable/btn_modi_small"
-                    android:fontFamily="@font/nexon2"
-                    android:text="비밀번호 변경"
-                    android:textColor="@color/white"
-                    android:textSize="11sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/data_pwd"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/data_pwd" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <ImageView
+            <TextView
+                android:id="@+id/title_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="이메일 주소"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/data_email"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2"
+                android:gravity="end"
+                android:text="emailNow@email.com"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toEndOf="@+id/title_email"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.Button
+                android:id="@+id/btn_modi_email"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/data_email"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_modi_small"
+                android:fontFamily="@font/nexon2"
+                android:text="이메일 변경"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/data_email"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/data_email"
+                app:layout_constraintTop_toBottomOf="@+id/data_email" />
+
+            <TextView
+                android:id="@+id/title_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="비밀번호"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_email"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="@+id/title_email"
+                app:layout_constraintTop_toBottomOf="@+id/title_email" />
+
+            <TextView
+                android:id="@+id/data_pwd"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="125dp"
+                android:fontFamily="@font/nexon2"
+                android:gravity="end"
+                android:text="*****************"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/data_email"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="@+id/data_email"
+                app:layout_constraintTop_toBottomOf="@+id/data_email" />
+
+            <android.widget.Button
+                android:id="@+id/btn_modi_pwd"
+                android:layout_width="110dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/data_email"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_modi_small"
+                android:fontFamily="@font/nexon2"
+                android:text="비밀번호 변경"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/data_pwd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/data_pwd"
+                app:layout_constraintTop_toBottomOf="@+id/data_pwd" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"
+                android:src="@drawable/line"
+                app:layout_constraintEnd_toEndOf="@+id/data_email"
+                app:layout_constraintHorizontal_bias="0.593"
+                app:layout_constraintStart_toStartOf="@+id/title_email"
+                app:layout_constraintTop_toBottomOf="@+id/btn_modi_pwd" />
+
+            <TextView
+                android:id="@+id/title_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="이름"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_pwd"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/title_pwd"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+            <EditText
+                android:id="@+id/edit_modi_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:src="@drawable/line"/>
+                android:background="@drawable/editext_sign"
+                android:fontFamily="@font/nexon2"
+                android:hint="현재 이름"
+                android:inputType="textVisiblePassword"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="@color/instead"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_name"
+                app:layout_constraintEnd_toEndOf="@+id/data_pwd"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/data_pwd"
+                app:layout_constraintTop_toTopOf="@+id/title_name" />
 
+            <TextView
+                android:id="@+id/title_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="생년월일"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_name"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="@+id/title_name"
+                app:layout_constraintTop_toBottomOf="@+id/title_name" />
 
-            <LinearLayout
-                android:id="@+id/group_modi_name"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+            <EditText
+                android:id="@+id/edit_modi_birthday"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/editext_sign"
+                android:fontFamily="@font/nexon2"
+                android:hint="현재 생년월일"
+                android:inputType="numberSigned"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="@color/instead"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_birthday"
+                app:layout_constraintEnd_toEndOf="@+id/edit_modi_name"
+                app:layout_constraintStart_toStartOf="@+id/edit_modi_name"
+                app:layout_constraintTop_toTopOf="@+id/title_birthday" />
 
-                <TextView
-                    android:id="@+id/title_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="이름"
-                    android:paddingStart="55dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp" />
+            <TextView
+                android:id="@+id/title_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="성별"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_birthday"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/title_birthday"
+                app:layout_constraintTop_toBottomOf="@+id/title_birthday" />
 
-                <EditText
-                    android:id="@+id/edit_modi_name"
-                    android:layout_width="180dp"
-                    android:layout_height="41dp"
-                    android:background="@drawable/editext_sign"
-                    android:inputType="textVisiblePassword"
-                    android:hint="현재 이름"
-                    android:textColorHint="@color/hint"
-                    android:textSize="12sp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="95dp"
-                    android:fontFamily="@font/nexon2"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"/>
-            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/radio_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/title_sex"
+                app:layout_constraintEnd_toEndOf="@+id/edit_modi_birthday"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/edit_modi_birthday"
+                app:layout_constraintTop_toTopOf="@+id/title_sex">
 
-            <LinearLayout
-                android:id="@+id/group_modi_birthday"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/radio_m"
+                    android:layout_width="58dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/selector_radio_button_left"
+                    android:button="@null"
+                    android:fontFamily="@font/nexon2_medium"
+                    android:paddingLeft="4dp"
+                    android:text="남"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="17sp" />
 
-                <TextView
-                    android:id="@+id/title_birthday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="생년월일"
-                    android:paddingStart="55dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp" />
+                <RadioButton
+                    android:id="@+id/radio_f"
+                    android:layout_width="57dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/selector_radio_button_right"
+                    android:button="@null"
+                    android:fontFamily="@font/nexon2_medium"
+                    android:paddingRight="4dp"
+                    android:text="여"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/selector_radio_text"
+                    android:textSize="17sp" />
 
-                <EditText
-                    android:id="@+id/edit_modi_birthday"
-                    android:layout_width="180dp"
-                    android:layout_height="41dp"
-                    android:background="@drawable/editext_sign"
-                    android:hint="현재 생년월일"
-                    android:inputType="textVisiblePassword"
-                    android:textColorHint="@color/hint"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"
-                    android:layout_marginStart="70dp"
-                    android:fontFamily="@font/nexon2"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"/>
-            </LinearLayout>
+            </RadioGroup>
 
-            <LinearLayout
-                android:id="@+id/group_modi_sex"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
+            <TextView
+                android:id="@+id/title_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="연락처"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_sex"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/title_sex"
+                app:layout_constraintTop_toBottomOf="@+id/title_sex" />
 
-                <TextView
-                    android:id="@+id/title_sex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="생별"
-                    android:paddingStart="55dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp" />
+            <EditText
+                android:id="@+id/edit_modi_phone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/editext_sign"
+                android:fontFamily="@font/nexon2"
+                android:hint="현재 연락처"
+                android:inputType="numberSigned"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="@color/instead"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_phone"
+                app:layout_constraintEnd_toEndOf="@+id/radio_sex"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/radio_sex"
+                app:layout_constraintTop_toTopOf="@+id/title_phone" />
 
-                <EditText
-                    android:id="@+id/edit_modi_sex"
-                    android:layout_width="180dp"
-                    android:layout_height="41dp"
-                    android:background="@drawable/editext_sign"
-                    android:hint="현재 성별"
-                    android:textColorHint="@color/hint"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"
-                    android:layout_marginStart="95dp"
-                    android:fontFamily="@font/nexon2"
-                    android:paddingStart="30dp"/>
-            </LinearLayout>
+            <TextView
+                android:id="@+id/title_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="84dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="긴급 연락처"
+                android:textColor="@color/instead"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@+id/title_phone"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/title_phone"
+                app:layout_constraintTop_toBottomOf="@+id/title_phone" />
 
-            <LinearLayout
-                android:id="@+id/group_modi_phone"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/title_phone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="연락처"
-                    android:paddingStart="55dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/edit_modi_phone"
-                    android:layout_width="180dp"
-                    android:layout_height="41dp"
-                    android:background="@drawable/editext_sign"
-                    android:hint="현재 연락처"
-                    android:inputType="textVisiblePassword"
-                    android:textColorHint="@color/hint"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"
-                    android:layout_marginStart="83dp"
-                    android:fontFamily="@font/nexon2"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/group_modi_call"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/title_call"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nexon2_bold"
-                    android:text="긴급 연락처"
-                    android:paddingStart="55dp"
-                    android:layout_gravity="center"
-                    android:textColor="@color/instead"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/edit_modi_call"
-                    android:layout_width="180dp"
-                    android:layout_height="41dp"
-                    android:background="@drawable/editext_sign"
-                    android:hint="현재 긴급연락처"
-                    android:inputType="textVisiblePassword"
-                    android:textColorHint="@color/hint"
-                    android:layout_gravity="center"
-                    android:textSize="12sp"
-                    android:layout_marginStart="54dp"
-                    android:fontFamily="@font/nexon2"
-                    android:paddingStart="30dp"
-                    android:paddingEnd="30dp"/>
-            </LinearLayout>
+            <EditText
+                android:id="@+id/edit_modi_call"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/editext_sign"
+                android:fontFamily="@font/nexon2"
+                android:hint="현재 긴급 연락처"
+                android:inputType="numberSigned"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:textColor="@color/instead"
+                android:textColorHint="@color/hint"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_call"
+                app:layout_constraintEnd_toEndOf="@+id/edit_modi_phone"
+                app:layout_constraintStart_toStartOf="@+id/edit_modi_phone"
+                app:layout_constraintTop_toTopOf="@+id/title_call" />
 
             <android.widget.Button
                 android:id="@+id/btn_update"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="47dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/btn_modi_small"
-                android:fontFamily="@font/nexon2_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/btn_modi_big"
+                android:fontFamily="@font/nexon2"
                 android:text="변경 사항 저장"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/edit_modi_call"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/edit_modi_call"
+                app:layout_constraintTop_toBottomOf="@+id/edit_modi_call" />
 
 
-        </LinearLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

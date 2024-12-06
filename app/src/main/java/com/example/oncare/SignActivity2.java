@@ -55,11 +55,11 @@ public class SignActivity2 extends AppCompatActivity {
                 .setArrowSize(10)
                 .setArrowOrientation(ArrowOrientation.TOP)
                 .setIsVisibleArrow(true)
-                .setArrowPosition(0.3f)
-                .setWidthRatio(0.4f)
-                .setHeight(60)
-                .setPadding(5)
-                .setTextSize(10f)
+                .setArrowPosition(0.37f)
+                .setWidthRatio(0.53f)
+                .setHeight(70)
+                .setPadding(9)
+                .setTextSize(15f)
                 .setCornerRadius(4f)
                 .setAlpha(0.9f)
                 .setText("위험 신호 발생 시, 신고할 연락처.\n" +
@@ -70,11 +70,11 @@ public class SignActivity2 extends AppCompatActivity {
                 .build();
 
         toast_fail = new Balloon.Builder(getApplicationContext())
-                .setWidthRatio(0.4f)
-                .setHeight(60)
+                .setWidthRatio(0.5f)
+                .setHeight(65)
                 .setIsVisibleArrow(false)
-                .setPadding(5)
-                .setTextSize(10f)
+                .setPadding(9)
+                .setTextSize(14f)
                 .setCornerRadius(30f)
                 .setAlpha(0.8f)
                 .setText("빈 칸 없이 입력해주세요.")
@@ -106,7 +106,7 @@ public class SignActivity2 extends AppCompatActivity {
                 phone_input= String.valueOf(edit_phone.getText());
                 emergency_call_input= String.valueOf(edit_emergency_call.getText());
 
-                if(radio_sex.getCheckedRadioButtonId()==0)
+                if(radio_sex.getCheckedRadioButtonId()==R.id.radio_m)
                     sex_input='m';
                 else sex_input='f';
 

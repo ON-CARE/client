@@ -58,16 +58,13 @@ public class MapFragment extends Fragment {
 
                 double current_la, current_long; // 현재 위도, 경도 값 저장
 
-                // 위치 정보 불러오기              테스트용 값
+                // 위치 정보 불러오기  (테스트용)
                 current_la = 36.62402852579321;
                 current_long = 127.46142862451627;
 
                 map = kakaoMap;
 
                 LabelLayer layer = map.getLabelManager().getLayer();
-                LabelStyles marker_red = map.getLabelManager()
-                        .addLabelStyles(LabelStyles.from(LabelStyle.from(R.drawable.icon_marker_red)));
-                LabelStyles marker_green = map.getLabelManager().addLabelStyles(LabelStyles.from(LabelStyle.from(R.drawable.icon_marker_green)));
 
                 markCurrentLocation(layer, current_la, current_long);
                 showMarker(layer);
