@@ -4,10 +4,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,9 +16,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class DeleteActivity extends AppCompatActivity {
 
 
-    ImageView btn_back;
-    Button btn_delete;
-    ConfirmDialog confirmDialog;
+    private ImageView btn_back;
+    private Button btn_delete;
+    private ConfirmDialog confirmDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

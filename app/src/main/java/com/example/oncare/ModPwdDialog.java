@@ -16,7 +16,7 @@ import java.util.Objects;
 public class ModPwdDialog extends Dialog {
 
     Button btn_cancle, btn_submit;
-    EditText edit_old_pwd, edit_new_pwd, edit_new_pwd_again;
+    private EditText edit_old_pwd, edit_new_pwd, edit_new_pwd_again;
 
     public ModPwdDialog(@NonNull Context context) {
         super(context);
