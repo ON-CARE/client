@@ -1,7 +1,9 @@
 package com.example.oncare;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ public class HomeFragment extends Fragment {
     Button btn_test;
     EmergencyDialog emergencyDialog;
     ConfirmDialog confirmDialog;
+    ConstraintLayout tab_step;
 
 
     @Override
@@ -37,6 +40,7 @@ public class HomeFragment extends Fragment {
         data_heartrate=v.findViewById(R.id.data_heartrate);
         data_step=v.findViewById(R.id.data_step);
         data_ecg=v.findViewById(R.id.data_ecg);
+        tab_step=v.findViewById(R.id.container_step);
         txt_name.bringToFront();
         nim.bringToFront();
 
@@ -59,6 +63,14 @@ public class HomeFragment extends Fragment {
                         confirmDialog.show();
                     }
                 });
+            }
+        });
+
+        tab_step.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent to_step_detail = new Intent(getActivity(), StepActivity.class);
+                startActivity(to_step_detail);
             }
         });
 

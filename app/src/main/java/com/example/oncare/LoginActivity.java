@@ -77,14 +77,14 @@ public class LoginActivity extends AppCompatActivity {
                         .build();
 
                 // 빈 칸 체크
-                if(email_input.isEmpty() || pwd_input.isEmpty()){
-                    toast_fail.showAlignBottom(btn_login, 0, 250);
-                    toast_fail.dismissWithDelay(1300L);
-                }else{
+                //if(email_input.isEmpty() || pwd_input.isEmpty()){
+                    //toast_fail.showAlignBottom(btn_login, 0, 250);
+                    //toast_fail.dismissWithDelay(1300L);
+                //}else{
                     // 로그인 성공 시, 홈 화면으로 이동
                     Intent home = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(home);
-                }
+                //}
                 
             }
         });

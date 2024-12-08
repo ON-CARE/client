@@ -5,6 +5,187 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_grey"
     tools:context=".StepActivity">
+
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_back"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_title" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/nexon2_bold"
+        android:text="걸음수"
+        android:textColor="@color/instead"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/day_step_chart"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_biodata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_step_chart">
+
+        <TextView
+            android:id="@+id/txt_title_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nexon2_medium"
+            android:text="걸음수 및 활동량"
+            android:textColor="@color/instead"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexon2"
+            android:gravity="end"
+            android:text="2024.12.06"
+            android:textColor="#858585"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_title_tab1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.98"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_tab1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_selected_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nexon2_medium"
+            android:gravity="start"
+            android:text="100"
+            android:textColor="@color/instead"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title_tab1" />
+
+        <TextView
+            android:id="@+id/txt_unit_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/nexon2"
+            android:text="걸음"
+            android:textColor="@color/hint"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selected_step"
+            app:layout_constraintStart_toEndOf="@+id/txt_selected_step"
+            app:layout_constraintTop_toTopOf="@+id/txt_selected_step"
+            app:layout_constraintVertical_bias="0.65" />
+
+        <TextView
+            android:id="@+id/txt_selected_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/nexon2"
+            android:gravity="start"
+            android:text="1.1"
+            android:textColor="@color/instead"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selected_step" />
+
+        <TextView
+            android:id="@+id/txt_unit_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/nexon2"
+            android:text="km"
+            android:textColor="@color/hint"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selected_distance"
+            app:layout_constraintStart_toEndOf="@+id/txt_selected_distance"
+            app:layout_constraintTop_toTopOf="@+id/txt_selected_distance"
+            app:layout_constraintVertical_bias="0.9" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/line_partition"
+            app:layout_constraintStart_toEndOf="@+id/txt_unit_distance"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selected_step" />
+
+        <TextView
+            android:id="@+id/txt_selected_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/nexon2"
+            android:gravity="start"
+            android:text="300"
+            android:textColor="@color/instead"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selected_distance"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selected_step"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_unit_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/nexon2"
+            android:text="kcal"
+            android:textColor="@color/hint"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_selected_calories"
+            app:layout_constraintStart_toEndOf="@+id/txt_selected_calories"
+            app:layout_constraintTop_toTopOf="@+id/txt_selected_calories"
+            app:layout_constraintVertical_bias="0.6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.example.oncare;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -58,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void hideBottomNav(){
+        nav.setVisibility(View.GONE);
+    }
+
+    public void showBottomNav(){
+        nav.setVisibility(View.VISIBLE);
 
     }
+
 }

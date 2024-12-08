@@ -10,14 +10,12 @@
 
     <ImageView
         android:id="@+id/btn_back"
-        android:layout_width="38dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="28dp"
-        android:scaleX="0.8"
-        android:scaleY="0.7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
         android:src="@drawable/icon_back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +41,7 @@
         android:fontFamily="@font/nexon2"
         android:text="이메일 주소"
         android:textColor="@color/instead"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_title"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="@+id/txt_title"
@@ -64,9 +62,9 @@
         android:textColor="@color/instead"
         android:textColorHint="@color/hint"
         android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_email"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txt_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
     <TextView
@@ -77,7 +75,7 @@
         android:fontFamily="@font/nexon2"
         android:text="비밀번호"
         android:textColor="@color/instead"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_email"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="@+id/txt_email"
@@ -87,12 +85,12 @@
         android:id="@+id/tooltip_warn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:scaleX="0.9"
-        android:scaleY="0.9"
+        android:layout_marginTop="110dp"
+        android:scaleX="0.8"
+        android:scaleY="0.8"
         android:src="@drawable/icon_tootip_warn"
         app:layout_constraintEnd_toEndOf="@+id/edit_email"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toEndOf="@+id/txt_pwd"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
@@ -111,9 +109,9 @@
         android:textColor="@color/instead"
         android:textColorHint="@color/hint"
         android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_pwd"
-        app:layout_constraintHorizontal_bias="0.008"
-        app:layout_constraintStart_toStartOf="@+id/txt_pwd"
+        app:layout_constraintEnd_toEndOf="@+id/edit_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_email"
         app:layout_constraintTop_toBottomOf="@+id/txt_pwd" />
 
     <TextView
@@ -124,7 +122,7 @@
         android:fontFamily="@font/nexon2"
         android:text="비밀번호 확인"
         android:textColor="@color/instead"
-        android:textSize="23sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_pwd"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_pwd"
@@ -145,9 +143,9 @@
         android:textColor="@color/instead"
         android:textColorHint="@color/hint"
         android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="@+id/txt_pwd_again"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/txt_pwd_again"
+        app:layout_constraintEnd_toEndOf="@+id/edit_pwd"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edit_pwd"
         app:layout_constraintTop_toBottomOf="@+id/txt_pwd_again" />
 
     <android.widget.Button

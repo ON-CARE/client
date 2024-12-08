@@ -42,7 +42,9 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.balloon)
-    implementation(libs.android)
     implementation(libs.play.services.location)
     implementation(libs.play.services.maps)
+    implementation(libs.material.v190)
+    implementation(libs.mpandroidchart)
+
 }

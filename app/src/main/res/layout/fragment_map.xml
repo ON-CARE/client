@@ -6,10 +6,157 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MapFragment">
 
-    <androidx.fragment.app.FragmentContainerView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/bg_bottom_sheet"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="true">
+
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/drag_handle"
+            android:layout_width="60dp"
+            android:layout_height="6dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/drag_handle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="185dp"/>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/nexon2_bold"
+            android:gravity="start"
+            android:text="충북대학교"
+            android:textColor="@color/instead"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/drag_handle" />
+
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:fontFamily="@font/nexon2"
+            android:gravity="start"
+            android:text="복지시설"
+            android:textColor="@color/hint"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_title"
+            app:layout_constraintStart_toEndOf="@+id/txt_title"
+            app:layout_constraintTop_toTopOf="@+id/txt_title"
+            app:layout_constraintVertical_bias="0.88" />
+
+        <TextView
+            android:id="@+id/txt_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nexon2"
+            android:text="350m"
+            android:textColor="@color/instead"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_title"
+            app:layout_constraintTop_toBottomOf="@+id/txt_title" />
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/nexon2"
+            android:gravity="start"
+            android:text="충북 청주시 서원구 모충로 1(개신동)"
+            android:textColor="#696D75"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_distance"
+            app:layout_constraintStart_toEndOf="@+id/txt_distance"
+            app:layout_constraintTop_toTopOf="@+id/txt_distance"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/txt_isopen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nexon2_medium"
+            android:gravity="start"
+            android:text="영업 중"
+            android:textColor="@color/instead"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_distance"
+            app:layout_constraintTop_toBottomOf="@+id/txt_distance" />
+
+        <TextView
+            android:id="@+id/txt_close_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/nexon2"
+            android:gravity="start"
+            android:text="22:00 까지"
+            android:textColor="#696D75"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_isopen"
+            app:layout_constraintStart_toEndOf="@+id/txt_isopen"
+            app:layout_constraintTop_toTopOf="@+id/txt_isopen"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/btn_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/icon_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="@+id/txt_isopen"
+            app:layout_constraintTop_toBottomOf="@+id/txt_isopen" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:src="@drawable/icon_share"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_phone"
+            app:layout_constraintStart_toEndOf="@+id/btn_phone"
+            app:layout_constraintTop_toTopOf="@+id/btn_phone"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 </FrameLayout>

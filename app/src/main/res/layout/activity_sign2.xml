@@ -10,29 +10,27 @@
 
   <ImageView
       android:id="@+id/btn_back"
-      android:layout_width="38dp"
-      android:layout_height="34dp"
-      android:layout_marginTop="32dp"
-      android:scaleX="0.8"
-      android:scaleY="0.7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
       android:src="@drawable/icon_back"
+      app:layout_constraintBottom_toBottomOf="@+id/txt_title"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.04"
+      app:layout_constraintHorizontal_bias="0.06"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="@+id/txt_title" />
 
   <TextView
       android:id="@+id/txt_title"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="36dp"
+      android:layout_marginTop="26dp"
       android:fontFamily="@font/nexon2_bold"
       android:text="회원가입"
       android:textColor="@color/instead"
-      android:textSize="25sp"
+      android:textSize="22sp"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.4"
-      app:layout_constraintStart_toEndOf="@+id/btn_back"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
@@ -43,9 +41,9 @@
       android:fontFamily="@font/nexon2"
       android:text="이름"
       android:textColor="@color/instead"
-      android:textSize="23sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toStartOf="@+id/txt_title"
-      app:layout_constraintHorizontal_bias="0.245"
+      app:layout_constraintHorizontal_bias="0.24"
       app:layout_constraintStart_toStartOf="@+id/btn_back"
       app:layout_constraintTop_toBottomOf="@+id/btn_back" />
 
@@ -64,9 +62,9 @@
       android:textColor="@color/instead"
       android:textColorHint="@color/hint"
       android:textSize="19sp"
-      app:layout_constraintEnd_toEndOf="@+id/txt_name"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/txt_name"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
   <TextView
@@ -77,7 +75,7 @@
       android:fontFamily="@font/nexon2"
       android:text="생년월일"
       android:textColor="@color/instead"
-      android:textSize="23sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/txt_name"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="@+id/txt_name"
@@ -100,7 +98,7 @@
       android:textSize="19sp"
       app:layout_constraintEnd_toEndOf="@+id/txt_birthday"
       app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/txt_birthday"
+      app:layout_constraintStart_toStartOf="@+id/edit_name"
       app:layout_constraintTop_toBottomOf="@+id/txt_birthday" />
 
   <TextView
@@ -111,7 +109,7 @@
       android:fontFamily="@font/nexon2"
       android:text="성별"
       android:textColor="@color/instead"
-      android:textSize="23sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/edit_name"
       app:layout_constraintHorizontal_bias="0.615"
       app:layout_constraintStart_toEndOf="@+id/txt_birthday"
@@ -123,7 +121,7 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="16dp"
       android:orientation="horizontal"
-      app:layout_constraintEnd_toEndOf="@+id/txt_sex"
+      app:layout_constraintEnd_toEndOf="@+id/edit_name"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="@+id/txt_sex"
       app:layout_constraintTop_toBottomOf="@+id/txt_sex">
@@ -164,7 +162,7 @@
       android:fontFamily="@font/nexon2"
       android:text="연락처"
       android:textColor="@color/instead"
-      android:textSize="23sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/txt_birthday"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="@+id/txt_birthday"
@@ -185,9 +183,9 @@
       android:textColor="@color/instead"
       android:textColorHint="@color/hint"
       android:textSize="19sp"
-      app:layout_constraintEnd_toEndOf="@+id/txt_phone"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/txt_phone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txt_phone" />
 
   <TextView
@@ -198,7 +196,7 @@
       android:fontFamily="@font/nexon2"
       android:text="긴급 연락처"
       android:textColor="@color/instead"
-      android:textSize="23sp"
+      android:textSize="20sp"
       app:layout_constraintEnd_toEndOf="@+id/txt_phone"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="@+id/txt_phone"
@@ -231,9 +229,9 @@
       android:paddingRight="34dp"
       android:textColorHint="@color/hint"
       android:textSize="19sp"
-      app:layout_constraintEnd_toEndOf="@+id/txt_emergency_call"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/txt_emergency_call"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/txt_emergency_call" />
 
   <android.widget.Button
@@ -248,7 +246,7 @@
       android:textSize="18sp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.494"
+      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent" />
 
 
