@@ -22,5 +22,6 @@
     <string name="update_dialog_msg">변경 사항이 성공적으로 저장되었습니다.</string>
     <string name="emergency_dialog_msg1">현재 도움이 필요한 상황이십니까?</string>
     <string name="emergency_dialog_msg2">응답하지 않을 시, 긴급 연락처로\n긴급 신고 메시지가 발송됩니다.</string>
+    <string name="msg_greeting">오늘 기분은 어떠신가요?</string>
 
 </resources>

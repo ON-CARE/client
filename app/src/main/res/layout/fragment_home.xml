@@ -11,19 +11,111 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_greeting"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/bg_biodata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/nexon2_bold"
+                android:gravity="start"
+                android:text="홍길동"
+                android:textColor="@color/instead"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2_bold"
+                android:text=" 님,"
+                android:textColor="@color/instead"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_name"
+                app:layout_constraintStart_toEndOf="@+id/txt_name"
+                app:layout_constraintTop_toTopOf="@+id/txt_name" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/nexon2_medium"
+                android:text="@string/msg_greeting"
+                android:textColor="@color/instead"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+            <TextView
+                android:id="@+id/btn_greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexon2"
+                android:layout_marginTop="16dp"
+                android:text="기분 전환하러 가기 >"
+                android:textColor="#A2A6A2"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:drawableBottomCompat="@drawable/line_greeting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <ImageView
+                android:id="@+id/img_smile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="212dp"
+                android:src="@drawable/img_smile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.625" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/temp_indicator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="104dp"
             android:fontFamily="@font/nexon2_bold"
+            android:layout_marginTop="40dp"
             android:text="나의\n생체데이터"
             android:textColor="@color/instead"
             android:textSize="40dp"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_greeting" />
 
         <ImageView
             android:id="@+id/img_clock"
@@ -51,62 +143,23 @@
             app:layout_constraintStart_toEndOf="@+id/img_clock"
             app:layout_constraintTop_toTopOf="@+id/img_clock" />
 
+
         <Button
             android:id="@+id/btn_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="744dp"
             android:text="신고 팝업 테스트용"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.103"
+            app:layout_constraintHorizontal_bias="0.884"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/user_name"
-            android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="68dp"
-            android:fontFamily="@font/nexon2_bold"
-            android:gravity="end"
-            android:maxWidth="130dp"
-            android:singleLine="true"
-            android:textColor="@color/instead"
-            android:textSize="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.59"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/nim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:fontFamily="@font/nexon2_bold"
-            android:text=" 님,"
-            android:textColor="@color/instead"
-            android:textSize="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.112"
-            app:layout_constraintStart_toEndOf="@+id/user_name"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="361dp"
-            android:layout_height="106dp"
-            android:layout_marginTop="48dp"
-            android:src="@drawable/home_greeting"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.331" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tab_heartrate"
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="120dp"
             android:layout_marginTop="14dp"
             android:background="@drawable/bg_biodata"
             android:paddingTop="20dp"
@@ -192,7 +245,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tab_step"
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="120dp"
             android:layout_marginTop="9dp"
             android:background="@drawable/bg_biodata"
             android:paddingTop="20dp"
@@ -276,7 +329,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tab_ecg"
             android:layout_width="350dp"
-            android:layout_height="110dp"
+            android:layout_height="120dp"
             android:layout_marginTop="9dp"
             android:background="@drawable/bg_biodata"
             android:paddingTop="20dp"
