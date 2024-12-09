@@ -40,7 +40,7 @@
             android:layout_width="110dp"
             android:layout_height="43dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/btn_confirm_dialog"
+            android:background="@drawable/btn_theme_4corner"
             android:fontFamily="@font/nexon2"
             android:text="닫기"
             android:textColor="@color/white"

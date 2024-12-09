@@ -124,7 +124,7 @@
         android:layout_width="115dp"
         android:layout_height="45dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/btn_confirm_dialog"
+        android:background="@drawable/btn_theme_4corner"
         android:fontFamily="@font/nexon2"
         android:text="확인"
         android:textColor="@color/white"

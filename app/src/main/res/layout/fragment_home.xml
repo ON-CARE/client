@@ -15,13 +15,13 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="104dp"
             android:fontFamily="@font/nexon2_bold"
             android:text="나의\n생체데이터"
             android:textColor="@color/instead"
-            android:textSize="42dp"
+            android:textSize="40dp"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.129"
+            app:layout_constraintHorizontal_bias="0.089"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -29,14 +29,14 @@
             android:id="@+id/img_clock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="12dp"
             android:scaleX="1.2"
             android:scaleY="1.2"
             android:src="@drawable/icon_clock"
             app:layout_constraintBottom_toBottomOf="@+id/textView"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.962" />
+            app:layout_constraintVertical_bias="0.9" />
 
         <TextClock
             android:id="@+id/txt_last_time"
@@ -55,10 +55,10 @@
             android:id="@+id/btn_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="252dp"
-            android:text="For Test"
+            android:layout_marginTop="744dp"
+            android:text="신고 팝업 테스트용"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.874"
+            app:layout_constraintHorizontal_bias="0.103"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,200 +104,243 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/container_heartrate"
-            android:layout_width="320dp"
-            android:layout_height="125dp"
-            android:layout_marginTop="20dp"
+            android:id="@+id/tab_heartrate"
+            android:layout_width="350dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="14dp"
             android:background="@drawable/bg_biodata"
-            app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintHorizontal_bias="0.021"
-            app:layout_constraintStart_toStartOf="@+id/textView"
+            android:paddingTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <TextView
                 android:id="@+id/title_heartrate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
                 android:fontFamily="@font/nexon2"
+                android:layout_marginTop="3dp"
                 android:text="심박수"
                 android:textColor="@color/dark_blue"
-                android:textSize="21sp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_heartrate"
-                app:layout_constraintStart_toEndOf="@+id/img_heartrate"
-                app:layout_constraintTop_toTopOf="@+id/img_heartrate"
-                app:layout_constraintVertical_bias="1.0" />
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_heartrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/icon_heartrate"
+                app:layout_constraintBottom_toBottomOf="@+id/title_heartrate"
+                app:layout_constraintStart_toEndOf="@+id/title_heartrate"
+                app:layout_constraintTop_toTopOf="@+id/title_heartrate" />
 
             <TextView
                 android:id="@+id/data_heartrate"
-                android:layout_width="165dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="6dp"
                 android:fontFamily="@font/nexon2_medium"
-                android:gravity="end"
+                android:gravity="start"
+                android:layout_marginBottom="6dp"
                 android:text="70"
                 android:textColor="@color/dark_blue"
-                android:textSize="45sp"
+                android:textSize="42sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.3"
-                app:layout_constraintStart_toEndOf="@+id/title_heartrate" />
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_heartrate" />
 
             <TextView
                 android:id="@+id/unit_heartrate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="@font/nexon2_light"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/nexon2"
                 android:text="bpm"
                 android:textColor="@color/unit"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/data_heartrate"
-                app:layout_constraintHorizontal_bias="0.95"
-                app:layout_constraintStart_toStartOf="@+id/data_heartrate"
-                app:layout_constraintTop_toBottomOf="@+id/data_heartrate" />
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/data_heartrate"
+                app:layout_constraintStart_toEndOf="@+id/data_heartrate"
+                app:layout_constraintTop_toTopOf="@+id/data_heartrate"
+                app:layout_constraintVertical_bias="0.75" />
 
-            <ImageView
-                android:id="@+id/img_heartrate"
+            <TextView
+                android:id="@+id/heartrate_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="1.3"
-                android:scaleY="1.3"
-                android:src="@drawable/icon_heartrate"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/nexon2_light"
+                android:text="자세히 보기 >"
+                android:textColor="@color/hint"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/data_heartrate"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.17" />
+                app:layout_constraintTop_toTopOf="@+id/data_heartrate"
+                app:layout_constraintVertical_bias="0.999" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/container_step"
-            android:layout_width="320dp"
-            android:layout_height="125dp"
-            android:layout_marginTop="12dp"
+            android:id="@+id/tab_step"
+            android:layout_width="350dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="9dp"
             android:background="@drawable/bg_biodata"
-            app:layout_constraintEnd_toEndOf="@+id/container_heartrate"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/container_heartrate"
-            app:layout_constraintTop_toBottomOf="@+id/container_heartrate">
+            android:paddingTop="20dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_heartrate">
 
             <TextView
                 android:id="@+id/title_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:fontFamily="@font/nexon2"
+                android:layout_marginTop="3dp"
                 android:text="걸음수"
                 android:textColor="@color/dark_blue"
-                android:textSize="21sp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_footprint"
-                app:layout_constraintStart_toEndOf="@+id/img_footprint"
-                app:layout_constraintTop_toTopOf="@+id/img_footprint"
-                app:layout_constraintVertical_bias="0.23" />
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:src="@drawable/icon_step"
+                app:layout_constraintBottom_toBottomOf="@+id/title_step"
+                app:layout_constraintStart_toEndOf="@+id/title_step"
+                app:layout_constraintTop_toTopOf="@+id/title_step" />
 
             <TextView
                 android:id="@+id/data_step"
-                android:layout_width="165dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/nexon2_medium"
-                android:gravity="end"
-                android:text="11111"
+                android:gravity="start"
+                android:text="99999"
                 android:textColor="@color/dark_blue"
-                android:textSize="43sp"
+                android:textSize="42sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.3"
-                app:layout_constraintStart_toEndOf="@+id/title_step" />
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_step" />
 
             <TextView
                 android:id="@+id/unit_step"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:fontFamily="@font/nexon2_light"
+                android:layout_marginStart="7dp"
+                android:fontFamily="@font/nexon2"
                 android:text="걸음"
                 android:textColor="@color/unit"
-                android:textSize="17sp"
-                app:layout_constraintEnd_toEndOf="@+id/data_step"
-                app:layout_constraintHorizontal_bias="0.96"
-                app:layout_constraintStart_toStartOf="@+id/data_step"
-                app:layout_constraintTop_toBottomOf="@+id/data_step" />
+                android:textSize="19sp"
+                app:layout_constraintBottom_toBottomOf="@+id/data_step"
+                app:layout_constraintStart_toEndOf="@+id/data_step"
+                app:layout_constraintTop_toTopOf="@+id/data_step"
+                app:layout_constraintVertical_bias="0.75" />
 
-            <ImageView
-                android:id="@+id/img_footprint"
+            <TextView
+                android:id="@+id/step_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="1.3"
-                android:scaleY="1.5"
-                android:src="@drawable/icon_footprint"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/nexon2_light"
+                android:text="자세히 보기 >"
+                android:textColor="@color/hint"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/data_step"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.035"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.13" />
+                app:layout_constraintTop_toTopOf="@+id/data_step"
+                app:layout_constraintVertical_bias="0.999" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/container_ecg"
-            android:layout_width="320dp"
-            android:layout_height="125dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="120dp"
+            android:id="@+id/tab_ecg"
+            android:layout_width="350dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="9dp"
             android:background="@drawable/bg_biodata"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/container_step"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/container_step"
-            app:layout_constraintTop_toBottomOf="@+id/container_step"
-            app:layout_constraintVertical_bias="0.0">
+            android:paddingTop="20dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_step">
 
             <TextView
                 android:id="@+id/title_ecg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
                 android:fontFamily="@font/nexon2"
                 android:text="심전도"
+                android:layout_marginTop="3dp"
                 android:textColor="@color/dark_blue"
-                android:textSize="21sp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_ecg"
-                app:layout_constraintStart_toEndOf="@+id/img_ecg"
-                app:layout_constraintTop_toTopOf="@+id/img_ecg"
-                app:layout_constraintVertical_bias="0.5" />
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:src="@drawable/icon_ecg"
+                app:layout_constraintBottom_toBottomOf="@+id/title_ecg"
+                app:layout_constraintStart_toEndOf="@+id/title_ecg"
+                app:layout_constraintTop_toTopOf="@+id/title_ecg" />
 
             <TextView
                 android:id="@+id/data_ecg"
-                android:layout_width="165dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/nexon2_medium"
-                android:gravity="end"
+                android:gravity="start"
                 android:text="동리듬"
                 android:textColor="@color/dark_blue"
                 android:textSize="38sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.25"
-                app:layout_constraintStart_toEndOf="@+id/title_ecg" />
+                app:layout_constraintHorizontal_bias="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_ecg" />
 
-
-            <ImageView
-                android:id="@+id/img_ecg"
+            <TextView
+                android:id="@+id/ecg_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleX="1.3"
-                android:scaleY="1.3"
-                android:src="@drawable/icon_ecg"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:fontFamily="@font/nexon2_light"
+                android:text="자세히 보기 >"
+                android:textColor="@color/hint"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/data_ecg"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.15" />
+                app:layout_constraintTop_toTopOf="@+id/data_ecg"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

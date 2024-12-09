@@ -65,7 +65,7 @@ public class SignActivity2 extends AppCompatActivity {
                 .setText("위험 신호 발생 시, 신고할 연락처.\n" +
                         "입력하지 않으면 119로 설정됩니다.")
                 .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
-                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_main))
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
@@ -79,7 +79,7 @@ public class SignActivity2 extends AppCompatActivity {
                 .setAlpha(0.8f)
                 .setText("빈 칸 없이 입력해주세요.")
                 .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
-                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_main))
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 

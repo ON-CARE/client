@@ -8,16 +8,20 @@
     android:background="@color/white"
     tools:context=".LoginActivity">
 
-    <ImageView
+    <TextView
         android:id="@+id/img_logo"
-        android:layout_width="325dp"
-        android:layout_height="98dp"
-        android:src="@drawable/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ONCARE"
+        android:textSize="60sp"
+        android:textColor="@color/instead"
+        android:fontFamily="@font/paperlogy_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.301"/>
+
 
     <EditText
         android:id="@+id/edit_email"
@@ -62,10 +66,10 @@
 
     <android.widget.Button
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
         android:layout_marginTop="84dp"
-        android:background="@drawable/btn_login"
+        android:background="@drawable/btn_theme_4corner"
         android:fontFamily="@font/nexon2_medium"
         android:text="로그인"
         android:textColor="@color/white"
@@ -80,6 +84,8 @@
         android:id="@+id/btn_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleY="0.9"
+        android:scaleX="0.9"
         android:layout_marginTop="24dp"
         android:src="@drawable/btn_signup2"
         app:layout_constraintEnd_toEndOf="@+id/img_logo"

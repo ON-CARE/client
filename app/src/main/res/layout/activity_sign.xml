@@ -85,14 +85,12 @@
         android:id="@+id/tooltip_warn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:scaleX="0.8"
-        android:scaleY="0.8"
-        android:src="@drawable/icon_tootip_warn"
-        app:layout_constraintEnd_toEndOf="@+id/edit_email"
-        app:layout_constraintHorizontal_bias="0.04"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/icon_tooltip_warning"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_pwd"
         app:layout_constraintStart_toEndOf="@+id/txt_pwd"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+        app:layout_constraintTop_toTopOf="@+id/txt_pwd"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/edit_pwd"
@@ -150,16 +148,16 @@
 
     <android.widget.Button
         android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_sign"
+        android:layout_width="316dp"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_theme_4corner"
         android:fontFamily="@font/nexon2_medium"
         android:text="다음으로"
         android:textColor="@color/white"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.953" />

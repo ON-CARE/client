@@ -105,7 +105,7 @@ public class StepActivity extends AppCompatActivity {
 
         BarDataSet set_example = new BarDataSet(values, "DataSet");
         set_example.setDrawValues(false);
-        set_example.setHighLightColor(ContextCompat.getColor(this, R.color.theme_blue));
+        set_example.setHighLightColor(ContextCompat.getColor(this, R.color.theme_main));
         set_example.setColor(ContextCompat.getColor(this, R.color.menu_false)); // 색상 설정
 
 

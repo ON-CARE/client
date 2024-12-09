@@ -206,14 +206,12 @@
       android:id="@+id/tooltip_emergency_call"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="108dp"
-      android:scaleX="0.9"
-      android:scaleY="0.9"
-      android:src="@drawable/icon_tooltip_questionmark"
-      app:layout_constraintEnd_toEndOf="@+id/edit_phone"
-      app:layout_constraintHorizontal_bias="0.06"
+      android:layout_marginStart="12dp"
+      android:src="@drawable/icon_tooltip_info"
+      app:layout_constraintBottom_toBottomOf="@+id/txt_emergency_call"
       app:layout_constraintStart_toEndOf="@+id/txt_emergency_call"
-      app:layout_constraintTop_toBottomOf="@+id/txt_phone" />
+      app:layout_constraintTop_toTopOf="@+id/txt_emergency_call"
+      app:layout_constraintVertical_bias="0.0" />
 
   <EditText
       android:id="@+id/edit_emergency_call"
@@ -236,10 +234,10 @@
 
   <android.widget.Button
       android:id="@+id/btn_start"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="316dp"
+      android:layout_height="55dp"
       android:layout_marginBottom="44dp"
-      android:background="@drawable/btn_sign"
+      android:background="@drawable/btn_theme_4corner"
       android:fontFamily="@font/nexon2_medium"
       android:text="로그인하고 시작하기"
       android:textColor="@color/white"

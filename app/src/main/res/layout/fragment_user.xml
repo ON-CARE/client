@@ -33,7 +33,7 @@
             android:gravity="center"
             android:text="홍길동"
             android:textColor="@color/instead"
-            android:textSize="40sp"
+            android:textSize="36sp"
             app:layout_constraintBottom_toTopOf="@+id/txt_email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -48,7 +48,7 @@
             android:gravity="center"
             android:text="gildong@chungbuk.ac.kr"
             android:textColor="@color/instead"
-            android:textSize="23sp"
+            android:textSize="21sp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -57,20 +57,21 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="340dp"
-            android:layout_height="186dp"
-            android:layout_marginBottom="44dp"
+            android:layout_height="184dp"
+            android:layout_marginBottom="42dp"
             android:background="@drawable/bg_setting"
             android:orientation="vertical"
             android:paddingStart="24dp"
-            android:paddingTop="26dp"
+            android:paddingTop="24dp"
             android:paddingEnd="24dp"
-            android:paddingBottom="18dp"
+            android:paddingBottom="16dp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
             app:layout_constraintStart_toStartOf="@+id/constraintLayout">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/tab_modify"
+                android:layout_marginTop="2dp"
                 android:layout_width="285dp"
                 android:layout_height="wrap_content">
 
@@ -82,7 +83,7 @@
                     android:paddingStart="16dp"
                     android:text="개인정보 수정"
                     android:textColor="@color/instead"
-                    android:textSize="19sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/imageView2"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -115,7 +116,7 @@
                 android:id="@+id/tab_notification"
                 android:layout_width="285dp"
                 android:layout_height="wrap_content"
-                android:paddingTop="21dp">
+                android:paddingTop="19dp">
 
                 <TextView
                     android:id="@+id/title_notification"
@@ -125,7 +126,7 @@
                     android:paddingStart="16dp"
                     android:text="알림 설정"
                     android:textColor="@color/instead"
-                    android:textSize="19sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toTopOf="@+id/img_noti"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -158,7 +159,7 @@
                 android:id="@+id/tab_device"
                 android:layout_width="285dp"
                 android:layout_height="wrap_content"
-                android:paddingTop="22dp">
+                android:paddingTop="20dp">
 
                 <TextView
                     android:id="@+id/title_device"
@@ -168,7 +169,7 @@
                     android:paddingStart="16dp"
                     android:text="장치 설정"
                     android:textColor="@color/instead"
-                    android:textSize="19sp"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -189,7 +190,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="340dp"
-            android:layout_height="60dp"
+            android:layout_height="57dp"
             android:layout_marginBottom="148dp"
             android:background="@drawable/bg_setting"
             android:paddingStart="24dp"
@@ -209,7 +210,7 @@
                 android:paddingStart="16dp"
                 android:text="회원 탈퇴"
                 android:textColor="@color/warning_red"
-                android:textSize="19sp"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.004"

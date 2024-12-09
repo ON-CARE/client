@@ -40,7 +40,7 @@ public class HomeFragment extends Fragment {
         data_heartrate=v.findViewById(R.id.data_heartrate);
         data_step=v.findViewById(R.id.data_step);
         data_ecg=v.findViewById(R.id.data_ecg);
-        tab_step=v.findViewById(R.id.container_step);
+        tab_step=v.findViewById(R.id.tab_step);
         txt_name.bringToFront();
         nim.bringToFront();
 

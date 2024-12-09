@@ -61,7 +61,7 @@ public class SignActivity extends AppCompatActivity {
                 .setAlpha(0.9f)
                 .setText("8~16자\n영문 대소문자, 숫자 포함")
                 .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
-                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_main))
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
@@ -92,7 +92,7 @@ public class SignActivity extends AppCompatActivity {
                 .setAlpha(0.8f)
                 .setText("빈 칸 없이 입력해주세요.")
                 .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white))
-                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_blue))
+                .setBackgroundColor(ContextCompat.getColor(getApplicationContext(), R.color.theme_main))
                 .setBalloonAnimation(BalloonAnimation.FADE)
                 .build();
 
